@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+<link rel="stylesheet" href="/src.e31bb0bc.css"></head>
+<body>
+  <div class="page"> 
+    <header>
+      <h1>random facts</h1>
+    </header>
+
+    <main>
+      <!-- type -->
+      <div class="type">
+        <h2 class="type__header">Choose the type of input</h2>
+        <div class="type__buttons">
+        	<button class="type__buttons__btn active" id="btnNumber">Number</button>
+        	<button class="type__buttons__btn" id="btnYear">Year</button>
+        	<button class="type__buttons__btn" id="btnMath">Math</button>
+        </div>
+        
+      </div>
+
+      <!-- Input Area  -->
+      <div class="input">
+        <input type="number" name="number" id="number" autocomplete="off" required="">
+        <label for="number" class="label-number">
+          <span class="content">Enter a Number</span>
+        </label>
+      </div>
+
+      <!-- Fact area  -->
+      <div class="fact" id="fact">
+        <h2 class="fact__number" id="factNumer"></h2>
+        <p class="fact__text " id="factText"></p> 
+        <div class="loaders"><div class="loader"></div></div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="/src.e31bb0bc.js"></script>
+</body>
+</html>

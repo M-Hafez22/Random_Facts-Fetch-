@@ -1,0 +1,59 @@
+/*  --Map--
+.type
+	.header
+	.buttons
+		.btn
+		.active
+*/
+.type{
+  width: 100%;
+
+  &__header{
+  	text-transform: capitalize; 
+  	font-size: 2em;
+  	color: darken($clr, 15%);
+  }
+
+  &__buttons{
+  	display: flex;
+	  flex-direction: row; 
+	  justify-content: space-around;
+	  align-items: center;
+
+	  &__btn{
+	  	position:relative ;
+      color:  $clr;
+      font-size: 1.25em;
+      overflow: hidden;
+      padding: 1rem;
+      text-transform: capitalize;
+	    border: 2px solid currentColor;
+	    border-radius: 15%;
+
+	    &:hover::after{
+	      transform: scaleX(1);
+	      transform-origin: left;
+	    	}
+
+      &::after{
+        content: '';
+	      position:absolute ;
+	      left: 0;
+	      top: 0;
+	      height:100%;
+	      width: 100%;
+	      background:  rgba( $clr ,0.5);
+	      z-index: 1;
+	      transform: scaleX(0);
+	      transform-origin: right ;
+	      transition:  transform 1s ease;
+    	}
+	  }
+	  .active{
+			background: $clr;
+			color: lighten($clr, 70%);
+		}
+  }
+}
+
+

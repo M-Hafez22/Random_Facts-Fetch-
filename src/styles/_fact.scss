@@ -1,0 +1,18 @@
+
+.fact{
+	display: none;
+	width: 90%;
+	margin: auto;
+
+	&__number{}
+
+	&__text{
+		font-size: 1.25em;
+		color: darken($clr, 25%);
+		text-align: left;
+		background: lighten($clr, 65%);
+		border-radius: 15px;
+		padding: .5em;
+
+	}
+}

@@ -1,0 +1,224 @@
+.input {
+  width: 80%;
+  position: relative;
+  height: 50px;
+  color: teal;
+  padding: 0.5em;
+  margin: 1em auto;
+}
+.input input {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  font-size: 1em;
+  color: teal;
+  padding: 20px 5px 5px 5px;
+  border: none;
+  outline: none;
+  z-index: 5;
+}
+.input input:focus + label::after, .input input:valid + label::after {
+  height: 50%;
+  width: 100%;
+  color: teal;
+}
+.input input:focus + label, .input input:valid + label {
+  width: 100%;
+}
+.input input:focus + label .content, .input input:valid + label .content {
+  transform: translateY(-200%);
+  font-size: 1em;
+  color: teal;
+}
+.input label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transition: all 0.75s ease;
+  text-align: left;
+}
+.input label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0%;
+  width: 100%;
+  background: teal;
+  opacity: 0.3;
+  border-radius: 5px;
+  transition: all 0.75s ease;
+}
+.input label .content {
+  font-size: 1.25em;
+  width: 100%;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  padding-left: 1em;
+  transition: all 0.5s ease;
+}
+
+/*  --Map--
+.type
+	.header
+	.buttons
+		.btn
+		.active
+*/
+.type {
+  width: 100%;
+}
+.type__header {
+  text-transform: capitalize;
+  font-size: 2em;
+  color: #003434;
+}
+.type__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.type__buttons__btn {
+  position: relative;
+  color: teal;
+  font-size: 1.25em;
+  overflow: hidden;
+  padding: 1rem;
+  text-transform: capitalize;
+  border: 2px solid currentColor;
+  border-radius: 15%;
+}
+.type__buttons__btn:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.type__buttons__btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 128, 128, 0.5);
+  z-index: 1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 1s ease;
+}
+.type__buttons .active {
+  background: teal;
+  color: #e6ffff;
+}
+
+.fact {
+  display: none;
+  width: 90%;
+  margin: auto;
+}
+.fact__text {
+  font-size: 1.25em;
+  color: #000101;
+  text-align: left;
+  background: #cdffff;
+  border-radius: 15px;
+  padding: 0.5em;
+}
+
+.loaders {
+  display: none;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+
+.loader {
+  color: #1de7da;
+  font-size: 10px;
+  margin: 80px auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  top: 0;
+}
+
+.loader:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.loader:after {
+  left: 3.5em;
+}
+
+@-webkit-keyframes load7 {
+  0%, 80%, 100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+@keyframes load7 {
+  0%, 80%, 100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+/*
+[1] body
+[2] .page
+[3] header h1
+*/
+body {
+  height: 100vh;
+}
+body .page {
+  width: 90%;
+  height: 90vh;
+  margin: auto;
+  text-align: center;
+  background: #fff;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 0px 53px 1px teal;
+  -moz-box-shadow: 0px 0px 53px 1px teal;
+  box-shadow: 0px 0px 53px 1px teal;
+}
+body .page h1 {
+  text-transform: uppercase;
+  color: #001a1a;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+body .page main {
+  width: 90%;
+  margin: auto;
+}
+
+/*# sourceMappingURL=/src.e31bb0bc.css.map */

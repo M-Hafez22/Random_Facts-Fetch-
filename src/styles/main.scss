@@ -1,0 +1,45 @@
+@import 'config';
+@import 'input';
+@import 'type';
+@import 'fact';
+@import "loader";
+
+/*
+[1] body
+[2] .page
+[3] header h1
+*/
+
+
+body{
+  height: 100vh;
+  // overflow: hidden;
+  & .page{
+    width: 90%;
+    height: 90vh;
+    margin: auto;
+    text-align: center;
+    background: $bg-clr; 
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 53px 1px  $clr;
+		-moz-box-shadow: 0px 0px 53px 1px  $clr;
+		box-shadow: 0px 0px 53px 1px  $clr;
+
+    
+    h1{
+      text-transform : uppercase;
+      color: darken($clr, 20%);
+      padding: 1rem;
+      margin-top: 1rem; 
+    }
+
+    main{
+      width: 90%;
+      margin: auto;
+    }
+  }
+}
+
+
+
+

@@ -35,27 +35,39 @@ function changeToNumber(){
   	getFact();
 	}  
 }
+
 // Change API to Year Facts 
 function changeToYear(){
   for(let b of buttons){b.classList.remove('active')};
   btnYear.classList.add('active');
-  
-  if(numberInput.value){
-		type = '/year';
-  	getFact();
-	}
+  type = '/year';
+  getFact();
 }
+
 // Change API to Math Facts
 function changeToMath(){
 	for(let b of buttons){b.classList.remove('active')};
   btnMath.classList.add('active');
-	if(numberInput.value){
-		type = '/math';
-  	getFact();
-	}
+  type = '/math';
+  getFact();
 }
 
 
-function getFact() {
-  
+function  getFact(){
+  loader.style.display = 'block';
+  let number = `${numberInput.value}`;
+    fetch(`${url}${number}${type}`)
+    .then((resp) => resp.text())
+    .then((data) => {
+      if(number == ''){
+        loader.style.display = 'none';
+        fact.style.display = 'none';
+        console.log(number);
+      }else if(number != ''){
+        loader.style.display = 'none';
+        fact.style.display = 'block';
+        factText.textContent = data;
+      }
+    })
+    .catch((err) => console.log(err));
 }
